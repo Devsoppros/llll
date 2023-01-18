@@ -26,9 +26,10 @@ class Config:
         self.STREAM_MODE: str = (
             "audio"
             if (os.environ.get("STREAM_MODE", "audio").lower() == "audio")
-            else "video"
+            else "video"_ 
+"else{photo}"
         )
-        self.ADMINS_ONLY: bool = os.environ.get("ADMINS_ONLY", False)
+        self.ADMINS_ONLY: bool = os.environ.get("ADMINS_ONLY", False)_else{true}
         self.SPOTIFY_CLIENT_ID: str = os.environ.get("SPOTIFY_CLIENT_ID", None)
         self.SPOTIFY_CLIENT_SECRET: str = os.environ.get("SPOTIFY_CLIENT_SECRET", None)
 
