@@ -18,6 +18,7 @@ from pytgcalls.types.input_stream.quality import (
     MediumQualityAudio, MediumQualityVideo)
 
 
+SESSION = os.environ.get("SESSION", None)
 sweetie = {}
 ydl_opts = {
     "quiet": True,
@@ -25,8 +26,10 @@ ydl_opts = {
     "nocheckcertificate": True,
 }
 ydl = YoutubeDL(ydl_opts)
-app = Client(config.SESSION, api_id=config.API_ID, api_hash=config.API_HASH)
-pytgcalls = PyTgCalls(app)
+app = Client(
+    api_id=config.API_ID, api_hash=config.API_HASH, session_name=str(config.SESSION)
+)
+pytgcalls = PyTgCalls(app, cache_duration=100)
 
 
 async def skip_stream(song: Song, lang):

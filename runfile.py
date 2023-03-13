@@ -1,5 +1,3 @@
-#
-
 import os
 import json
 import shutil
@@ -21,7 +19,7 @@ from core import (
 REPO = """
 👨‍💻**Legend Music Player**👨‍💻
 - Repo: [GitHub](https://github.com/LEGEND-AI/LEGEND-MUSIC)
-- ⚜ [Owner](https://t.me/LegendBoy_XD) ⚜
+- ⚜ [Owner](https://t.me/LegendBoy_OP) ⚜
 """
 
 if config.BOT_TOKEN:
@@ -49,7 +47,7 @@ async def repo(_, message: Message):
 )
 @handle_error
 async def ping(_, message: Message):
-    await message.reply_text(f"⭐ **Pong!** ⭐\n`{await pytgcalls.ping} ms`")
+    await message.reply_text(f"😎 **Pong!** 😎\n`{await pytgcalls.ping} ms`")
 
 
 @client.on_message(
